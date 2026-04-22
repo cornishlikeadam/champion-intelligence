@@ -142,7 +142,7 @@ function App() {
 
             <div style={{ position: 'fixed', top: '32px', right: '32px', zIndex: 10, display: 'flex', gap: '12px' }}>
               <a 
-                href="https://github.com/cornishlikeadam/Notl8" 
+                href="https://not2l8-redesign.vercel.app" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="glass"
@@ -156,7 +156,7 @@ function App() {
                   border: '1px solid var(--accent-gold)'
                 }}
               >
-                <Key size={16} /> View NOT2L8 Repo
+                <Key size={16} /> Launch NOT2L8 Extension
               </a>
               <button className="glass" onClick={() => setAppState(STATES.ENTRY)} style={{ padding: '8px 16px', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
                 <LogOut size={16} /> Exit Vault

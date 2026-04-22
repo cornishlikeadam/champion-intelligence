@@ -99,7 +99,7 @@ const VaultEntry = ({ onEnter }) => {
           </button>
           
           <a 
-            href="https://github.com/cornishlikeadam/Notl8"
+            href="https://not2l8-redesign.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="glass"
@@ -116,7 +116,7 @@ const VaultEntry = ({ onEnter }) => {
               textDecoration: 'none'
             }}
           >
-            <ShieldCheck size={18} /> View Repo
+            <ShieldCheck size={18} /> Launch Extension
           </a>
         </div>
       </motion.div>
