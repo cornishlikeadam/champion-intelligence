@@ -79,23 +79,46 @@ const VaultEntry = ({ onEnter }) => {
           Scan or click to unlock the street-wisdom archives.
         </p>
 
-        <button 
-          onClick={onEnter}
-          className="glass pulse"
-          style={{
-            padding: '16px 40px',
-            fontSize: '1.1rem',
-            color: 'var(--accent-gold)',
-            border: '1px solid var(--accent-gold)',
-            cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '12px',
-            background: 'rgba(212, 175, 55, 0.1)'
-          }}
-        >
-          <Lock size={18} /> Unlock Vault <ArrowRight size={18} />
-        </button>
+        <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
+          <button 
+            onClick={onEnter}
+            className="glass pulse"
+            style={{
+              padding: '16px 40px',
+              fontSize: '1.1rem',
+              color: 'var(--accent-gold)',
+              border: '1px solid var(--accent-gold)',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '12px',
+              background: 'rgba(212, 175, 55, 0.1)'
+            }}
+          >
+            <Lock size={18} /> Unlock Vault <ArrowRight size={18} />
+          </button>
+          
+          <a 
+            href="https://github.com/cornishlikeadam/Notl8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="glass"
+            style={{
+              padding: '16px 30px',
+              fontSize: '1rem',
+              color: 'var(--text-secondary)',
+              border: '1px solid var(--border-glass)',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
+              background: 'rgba(255, 255, 255, 0.05)',
+              textDecoration: 'none'
+            }}
+          >
+            <ShieldCheck size={18} /> View Repo
+          </a>
+        </div>
       </motion.div>
 
       <div style={{
