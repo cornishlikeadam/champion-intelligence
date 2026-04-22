@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+  --bg-deep: #050508;
+  --bg-surface: rgba(15, 15, 25, 0.7);
+  --accent-gold: #d4af37;
+  --accent-indigo: #6366f1;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border-glass: rgba(255, 255, 255, 0.1);
+  --glow-gold: 0 0 15px rgba(212, 175, 55, 0.3);
+  --glow-indigo: 0 0 15px rgba(99, 102, 241, 0.3);
+  
+  --font-serif: 'Lora', serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow: hidden; /* We'll use a fixed layout for the 3am vibe */
+  min-height: 100vh;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: var(--bg-surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-glass);
+  border-radius: 10px;
+}
+
+/* Base Typography */
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse-glow {
+  0% { opacity: 0.5; box-shadow: 0 0 5px rgba(99, 102, 241, 0.2); }
+  50% { opacity: 1; box-shadow: 0 0 20px rgba(99, 102, 241, 0.5); }
+  100% { opacity: 0.5; box-shadow: 0 0 5px rgba(99, 102, 241, 0.2); }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+.pulse {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
